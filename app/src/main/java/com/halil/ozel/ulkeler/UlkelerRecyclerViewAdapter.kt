@@ -47,10 +47,11 @@ class UlkelerRecyclerViewAdapter(tumUlkeler : ArrayList<Ulke>) : RecyclerView.Ad
     }
 
 
+    /*
     fun setFilter(aranilanlar:ArrayList<Ulke>){
 
         ulkeler = ArrayList<Ulke>()
         ulkeler.addAll(aranilanlar)
         notifyDataSetChanged()
-    }
+    }*/
 }

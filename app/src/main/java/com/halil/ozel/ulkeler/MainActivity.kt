@@ -7,7 +7,9 @@ import android.view.Menu
 import android.widget.SearchView
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() , SearchView.OnQueryTextListener{
+class MainActivity : AppCompatActivity() {
+
+//, SearchView.OnQueryTextListener{
 
 
     lateinit var myAdapter : UlkelerRecyclerViewAdapter
@@ -32,7 +34,7 @@ class MainActivity : AppCompatActivity() , SearchView.OnQueryTextListener{
 
     }
 
-
+/*
     override fun onQueryTextSubmit(p0: String?): Boolean {
        return false
     }
@@ -70,6 +72,7 @@ class MainActivity : AppCompatActivity() , SearchView.OnQueryTextListener{
 
         return super.onCreateOptionsMenu(menu)
     }
+    */
 
     private fun veriKaynaginiDoldur() {
 
