@@ -1,0 +1,22 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="SearchViewStyle" parent="Widget.AppCompat.SearchView">
+
+        <item name="searchIcon">@android:drawable/ic_search_category_default</item>
+
+        <item name="searchHintIcon">@null</item>
+
+        <item name="android:queryHint">Arama yap</item>
+
+
+    </style>
+
+</resources>
