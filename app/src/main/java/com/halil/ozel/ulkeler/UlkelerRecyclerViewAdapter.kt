@@ -31,7 +31,7 @@ class UlkelerRecyclerViewAdapter(tumUlkeler : ArrayList<Ulke>) : RecyclerView.Ad
 
     }
 
-    class UlkeViewHolder(tek_uye: View) : RecyclerView.ViewHolder(tek_uye) {
+   inner class UlkeViewHolder(tek_uye: View) : RecyclerView.ViewHolder(tek_uye) {
         fun setData(oAnOlusturulanUlke: Ulke, p1: Int) {
 
             ulkeAd.text = oAnOlusturulanUlke.isim
@@ -44,5 +44,13 @@ class UlkelerRecyclerViewAdapter(tumUlkeler : ArrayList<Ulke>) : RecyclerView.Ad
         var ulkeAd = tekUlkeBilgisi.tvDostAdi
         var ulkeResim = tekUlkeBilgisi.imgDost
 
+    }
+
+
+    fun setFilter(aranilanlar:ArrayList<Ulke>){
+
+        ulkeler = ArrayList<Ulke>()
+        ulkeler.addAll(aranilanlar)
+        notifyDataSetChanged()
     }
 }

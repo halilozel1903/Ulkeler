@@ -3,9 +3,16 @@ package com.halil.ozel.ulkeler
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.StaggeredGridLayoutManager
+import android.view.Menu
+import android.widget.SearchView
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() , SearchView.OnQueryTextListener{
+
+
+    lateinit var myAdapter : UlkelerRecyclerViewAdapter
+
+
 
     var tumUlkeler = ArrayList<Ulke>()
 
@@ -15,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         veriKaynaginiDoldur()
 
-        var myAdapter = UlkelerRecyclerViewAdapter(tumUlkeler)
+         myAdapter = UlkelerRecyclerViewAdapter(tumUlkeler)
         recyclerviewDostlar.adapter = myAdapter
 
 
@@ -23,6 +30,45 @@ class MainActivity : AppCompatActivity() {
 
         recyclerviewDostlar.layoutManager = myLayoutManager
 
+    }
+
+
+    override fun onQueryTextSubmit(p0: String?): Boolean {
+       return false
+    }
+
+    override fun onQueryTextChange(p0: String?): Boolean {
+
+        var girilenVeri = p0?.toLowerCase()
+        var arananlar = ArrayList<Ulke>()
+
+        for (ulke in tumUlkeler){
+
+            var adi = ulke.isim.toLowerCase()
+
+            if (adi.contains(girilenVeri.toString())){
+
+                arananlar.add(ulke)
+
+            }
+        }
+
+        myAdapter.setFilter(arananlar)
+
+        return true
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+
+        menuInflater.inflate(R.menu.filtre_menu,menu)
+
+        var aramaItem = menu?.findItem(R.id.app_bar_search)
+
+        var searchView = aramaItem?.actionView as? SearchView
+
+        searchView?.setOnQueryTextListener(this)
+
+        return super.onCreateOptionsMenu(menu)
     }
 
     private fun veriKaynaginiDoldur() {
