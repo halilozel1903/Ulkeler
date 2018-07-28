@@ -15,6 +15,15 @@ class UlkelerRecyclerViewAdapter(tumUlkeler : ArrayList<Ulke>) : RecyclerView.Ad
 
 
 
+
+
+
+    var baskentAdi = ""
+    var telefonKodu = ""
+    var paraBirimi = ""
+    var dini = ""
+    var dili = ""
+
     var ulkeler = tumUlkeler
 
     var myfilter : FilterHelper = FilterHelper(tumUlkeler,this)
@@ -52,10 +61,32 @@ class UlkelerRecyclerViewAdapter(tumUlkeler : ArrayList<Ulke>) : RecyclerView.Ad
             ulkeResim.setImageResource(oAnOlusturulanUlke.resim)
 
 
+
             tekUlkeBilgisi.setOnClickListener{ po ->
 
-                var intent = Intent(po.context,DetayActivity::class.java)
-                po.context.startActivity(intent)
+
+                if (oAnOlusturulanUlke.isim.equals("Arnavutluk")){
+
+
+                    paraBirimi = "Arnavutluk Leki"
+                    telefonKodu = "+355"
+                    baskentAdi = "Tiran"
+                    dili = "Arnavutça"
+                    dini = "Seküler"
+
+                    var intent = Intent(po.context,DetayActivity::class.java)
+                    intent.putExtra("name",oAnOlusturulanUlke.isim)
+                    intent.putExtra("image",oAnOlusturulanUlke.resim)
+                    intent.putExtra("city",baskentAdi)
+                    intent.putExtra("phone",telefonKodu)
+                    intent.putExtra("money",paraBirimi)
+                    intent.putExtra("language",dili)
+                    intent.putExtra("religion",dini)
+                    po.context.startActivity(intent)
+
+                }
+
+
 
 
             }
