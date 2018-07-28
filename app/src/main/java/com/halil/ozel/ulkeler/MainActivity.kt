@@ -32,6 +32,21 @@ class MainActivity : AppCompatActivity() {
 
         recyclerviewDostlar.layoutManager = myLayoutManager
 
+        searchViewDost.setOnQueryTextListener(object : android.support.v7.widget.SearchView.OnQueryTextListener{
+
+
+            override fun onQueryTextSubmit(p0: String?): Boolean {
+                return false
+            }
+
+            override fun onQueryTextChange(p0: String?): Boolean {
+               myAdapter.filter.filter(p0)
+
+                return false
+            }
+
+        })
+
     }
 
 /*

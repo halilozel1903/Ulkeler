@@ -38,5 +38,8 @@ class FilterHelper(tumUlkeler:ArrayList<Ulke>,adapter:UlkelerRecyclerViewAdapter
 
     override fun publishResults(p0: CharSequence?, p1: FilterResults?) {
 
+        suankiAdapter.setFilter(p1?.values as ArrayList<Ulke>)
+        suankiAdapter.notifyDataSetChanged()
+
     }
 }

@@ -5,11 +5,18 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Filter
+import android.widget.Filterable
 import kotlinx.android.synthetic.main.tek_uye.view.*
 
-class UlkelerRecyclerViewAdapter(tumUlkeler : ArrayList<Ulke>) : RecyclerView.Adapter<UlkelerRecyclerViewAdapter.UlkeViewHolder>() {
+class UlkelerRecyclerViewAdapter(tumUlkeler : ArrayList<Ulke>) : RecyclerView.Adapter<UlkelerRecyclerViewAdapter.UlkeViewHolder>(),Filterable {
+
+
+
 
     var ulkeler = tumUlkeler
+
+    var myfilter : FilterHelper = FilterHelper(tumUlkeler,this)
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): UlkeViewHolder {
 
@@ -31,7 +38,13 @@ class UlkelerRecyclerViewAdapter(tumUlkeler : ArrayList<Ulke>) : RecyclerView.Ad
 
     }
 
-   inner class UlkeViewHolder(tek_uye: View) : RecyclerView.ViewHolder(tek_uye) {
+    fun setFilter(arrayList: ArrayList<Ulke>) {
+
+        ulkeler = arrayList // arrayList filtrelenmiş içerikleri içerir.
+
+    }
+
+    inner class UlkeViewHolder(tek_uye: View) : RecyclerView.ViewHolder(tek_uye) {
         fun setData(oAnOlusturulanUlke: Ulke, p1: Int) {
 
             ulkeAd.text = oAnOlusturulanUlke.isim
@@ -43,6 +56,13 @@ class UlkelerRecyclerViewAdapter(tumUlkeler : ArrayList<Ulke>) : RecyclerView.Ad
 
         var ulkeAd = tekUlkeBilgisi.tvDostAdi
         var ulkeResim = tekUlkeBilgisi.imgDost
+
+    }
+
+
+    override fun getFilter(): Filter {
+
+        return myfilter // adapter sınıfı içinde bulunan filter tipindeki nesneyi döndürür.
 
     }
 
