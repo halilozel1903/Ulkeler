@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -10,11 +10,11 @@
 
     <style name="SearchViewStyle" parent="Widget.AppCompat.SearchView">
 
-        <item name="searchIcon">@android:drawable/ic_search_category_default</item>
+        <item name="searchIcon">@drawable/ic_search_black_24dp</item>
 
         <item name="searchHintIcon">@null</item>
 
-        <item name="android:queryHint">Arama yap</item>
+        <item name="android:queryHint">Aramayı yapınız.</item>
 
 
     </style>
