@@ -1,5 +1,6 @@
 package com.halil.ozel.ulkeler
 
+import android.content.Intent
 import android.support.v7.widget.CardView
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -50,7 +51,27 @@ class UlkelerRecyclerViewAdapter(tumUlkeler : ArrayList<Ulke>) : RecyclerView.Ad
             ulkeAd.text = oAnOlusturulanUlke.isim
             ulkeResim.setImageResource(oAnOlusturulanUlke.resim)
 
+
+            tekUlkeBilgisi.setOnClickListener{ po ->
+
+                var intent = Intent(po.context,DetayActivity::class.java)
+                po.context.startActivity(intent)
+
+
+            }
+
+
+          /*  tekUlkeBilgisi.setOnClickListener(object : View.OnClickListener{
+                override fun onClick(p0: View?) {
+
+                }
+
+            })*/
+
+
         }
+
+
 
         var tekUlkeBilgisi = tek_uye as CardView
 
