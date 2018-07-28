@@ -92,10 +92,10 @@ class MainActivity : AppCompatActivity() {
     private fun veriKaynaginiDoldur() {
 
         var resimler = arrayOf(R.drawable.albania,R.drawable.andorra,
-                R.drawable.austria,R.drawable.belarus,R.drawable.belgium,
-                R.drawable.bosnia)
+                R.drawable.austria,R.drawable.argentina,R.drawable.belarus,R.drawable.belgium,
+                R.drawable.bosnia,R.drawable.brazil)
 
-        var isimler = arrayOf("Arnavutluk","Andorra","Avusturya","Belarus","Belçika","BosnaHersek")
+        var isimler = arrayOf("Arnavutluk","Andorra","Avusturya","Arjantin","Belarus","Belçika","BosnaHersek","Brezilya")
 
 
         for (i in 0..resimler.size-1){

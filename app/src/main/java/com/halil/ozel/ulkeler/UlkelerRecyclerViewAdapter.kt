@@ -21,7 +21,7 @@ class UlkelerRecyclerViewAdapter(tumUlkeler : ArrayList<Ulke>) : RecyclerView.Ad
     var baskentAdi = ""
     var telefonKodu = ""
     var paraBirimi = ""
-    var dini = ""
+    var kita = ""
     var dili = ""
 
     var ulkeler = tumUlkeler
@@ -72,7 +72,7 @@ class UlkelerRecyclerViewAdapter(tumUlkeler : ArrayList<Ulke>) : RecyclerView.Ad
                     telefonKodu = "+355"
                     baskentAdi = "Tiran"
                     dili = "Arnavutça"
-                    dini = "Seküler"
+                    kita = "Avrupa"
 
                     var intent = Intent(po.context,DetayActivity::class.java)
                     intent.putExtra("name",oAnOlusturulanUlke.isim)
@@ -81,7 +81,45 @@ class UlkelerRecyclerViewAdapter(tumUlkeler : ArrayList<Ulke>) : RecyclerView.Ad
                     intent.putExtra("phone",telefonKodu)
                     intent.putExtra("money",paraBirimi)
                     intent.putExtra("language",dili)
-                    intent.putExtra("religion",dini)
+                    intent.putExtra("continent",kita)
+                    po.context.startActivity(intent)
+
+                }else if (oAnOlusturulanUlke.isim.equals("Andorra")){
+
+
+                paraBirimi = "Euro"
+                telefonKodu = "+376"
+                baskentAdi = "Andorra la Vella"
+                dili = "Katalanca"
+                kita = "Avrupa"
+
+                var intent = Intent(po.context,DetayActivity::class.java)
+                intent.putExtra("name",oAnOlusturulanUlke.isim)
+                intent.putExtra("image",oAnOlusturulanUlke.resim)
+                intent.putExtra("city",baskentAdi)
+                intent.putExtra("phone",telefonKodu)
+                intent.putExtra("money",paraBirimi)
+                intent.putExtra("language",dili)
+                intent.putExtra("continent",kita)
+                po.context.startActivity(intent)
+
+            }else if (oAnOlusturulanUlke.isim.equals("Brezilya")){
+
+
+                    paraBirimi = "Brezilya Reali"
+                    telefonKodu = "+55"
+                    baskentAdi = "Brasília"
+                    dili = "Portekizce"
+                    kita = "Güney Amerika"
+
+                    var intent = Intent(po.context,DetayActivity::class.java)
+                    intent.putExtra("name",oAnOlusturulanUlke.isim)
+                    intent.putExtra("image",oAnOlusturulanUlke.resim)
+                    intent.putExtra("city",baskentAdi)
+                    intent.putExtra("phone",telefonKodu)
+                    intent.putExtra("money",paraBirimi)
+                    intent.putExtra("language",dili)
+                    intent.putExtra("continent",kita)
                     po.context.startActivity(intent)
 
                 }

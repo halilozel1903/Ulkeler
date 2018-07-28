@@ -18,7 +18,7 @@ class DetayActivity : AppCompatActivity() {
             tvUlkePhone.text = intent.getStringExtra("phone")
             tvUlkePara.text = intent.getStringExtra("money")
             tvUlkeDil.text = intent.getStringExtra("language")
-            tvUlkeDin.text = intent.getStringExtra("religion")
+            tvUlkeKita.text = intent.getStringExtra("continent")
             imgDetay.setImageResource(intent.getIntExtra("image",0))
         }
 
