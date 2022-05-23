@@ -1,21 +1,15 @@
 package com.halil.ozel.ulkeler
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.widget.StaggeredGridLayoutManager
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import android.view.Menu
 import android.widget.SearchView
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-//, SearchView.OnQueryTextListener{
-
-
-    lateinit var myAdapter : UlkelerRecyclerViewAdapter
-
-
-
+    lateinit var myAdapter: UlkelerRecyclerViewAdapter
     var tumUlkeler = ArrayList<Ulke>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,24 +18,26 @@ class MainActivity : AppCompatActivity() {
 
         veriKaynaginiDoldur()
 
-         myAdapter = UlkelerRecyclerViewAdapter(tumUlkeler)
+        myAdapter = UlkelerRecyclerViewAdapter(tumUlkeler)
         recyclerviewDostlar.adapter = myAdapter
 
 
-        var myLayoutManager = StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL)
+        val myLayoutManager =
+            StaggeredGridLayoutManager(
+                2,
+                StaggeredGridLayoutManager.VERTICAL
+            )
 
         recyclerviewDostlar.layoutManager = myLayoutManager
 
-        searchViewDost.setOnQueryTextListener(object : android.support.v7.widget.SearchView.OnQueryTextListener{
-
-
+        searchViewDost.setOnQueryTextListener(object :
+            androidx.appcompat.widget.SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(p0: String?): Boolean {
                 return false
             }
 
             override fun onQueryTextChange(p0: String?): Boolean {
-               myAdapter.filter.filter(p0)
-
+                myAdapter.filter.filter(p0)
                 return false
             }
 
@@ -49,62 +45,28 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-/*
-    override fun onQueryTextSubmit(p0: String?): Boolean {
-       return false
-    }
-
-    override fun onQueryTextChange(p0: String?): Boolean {
-
-        var girilenVeri = p0?.toLowerCase()
-        var arananlar = ArrayList<Ulke>()
-
-        for (ulke in tumUlkeler){
-
-            var adi = ulke.isim.toLowerCase()
-
-            if (adi.contains(girilenVeri.toString())){
-
-                arananlar.add(ulke)
-
-            }
-        }
-
-        myAdapter.setFilter(arananlar)
-
-        return true
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-
-        menuInflater.inflate(R.menu.filtre_menu,menu)
-
-        var aramaItem = menu?.findItem(R.id.app_bar_search)
-
-        var searchView = aramaItem?.actionView as? SearchView
-
-        searchView?.setOnQueryTextListener(this)
-
-        return super.onCreateOptionsMenu(menu)
-    }
-    */
-
     private fun veriKaynaginiDoldur() {
 
-        var resimler = arrayOf(R.drawable.albania,R.drawable.andorra,
-                R.drawable.austria,R.drawable.argentina,R.drawable.belarus,R.drawable.belgium,
-                R.drawable.bosnia,R.drawable.brazil)
+        val resimler = arrayOf(
+            R.drawable.albania, R.drawable.andorra,
+            R.drawable.austria, R.drawable.argentina, R.drawable.belarus, R.drawable.belgium,
+            R.drawable.bosnia, R.drawable.brazil
+        )
 
-        var isimler = arrayOf("Arnavutluk","Andorra","Avusturya","Arjantin","Belarus","Belçika","BosnaHersek","Brezilya")
+        val isimler = arrayOf(
+            "Arnavutluk",
+            "Andorra",
+            "Avusturya",
+            "Arjantin",
+            "Belarus",
+            "Belçika",
+            "BosnaHersek",
+            "Brezilya"
+        )
 
-
-        for (i in 0..resimler.size-1){
-
-            var eklenecekUlke = Ulke(isimler[i],resimler[i])
+        for (i in 0..resimler.size - 1) {
+            val eklenecekUlke = Ulke(isimler[i], resimler[i])
             tumUlkeler.add(eklenecekUlke)
-
         }
-
-
     }
 }
