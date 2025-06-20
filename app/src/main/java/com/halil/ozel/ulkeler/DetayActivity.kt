@@ -1,26 +1,29 @@
 package com.halil.ozel.ulkeler
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_detay.*
+import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
+import com.halil.ozel.ulkeler.databinding.ActivityDetayBinding
 
 class DetayActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityDetayBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detay)
+        binding = ActivityDetayBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val intent = intent
+        val ulke = intent.getParcelableExtra<Ulke>("ulke") ?: return
 
-        if (intent != null) {
-            tvDetay.text = intent.getStringExtra("name")
-            tvUlkeBaskent.text = intent.getStringExtra("city")
-            tvUlkePhone.text = intent.getStringExtra("phone")
-            tvUlkePara.text = intent.getStringExtra("money")
-            tvUlkeDil.text = intent.getStringExtra("language")
-            tvUlkeKita.text = intent.getStringExtra("continent")
-            imgDetay.setImageResource(intent.getIntExtra("image", 0))
-        }
+        binding.tvAdi.text = ulke.adi
+        binding.tvBaskent.text = "Başkent: ${ulke.baskent}"
+        binding.tvDil.text = "Dil: ${ulke.dil}"
+        binding.tvYuzolcumu.text = "Yüzölçümü: ${ulke.yuzolcumu} km²"
 
+        // Bayrak yükle (Flagpedia'dan)
+        Glide.with(this)
+            .load("https://flagpedia.net/data/flags/w1160/${ulke.bayrakKodu}.webp")
+            .into(binding.imgBayrak)
     }
 }
