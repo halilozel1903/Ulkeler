@@ -20,21 +20,21 @@ Explore countries, their capitals, languages, and flags in a simple and modern A
   <tr>
     <td align="center">
       <b>Main Screen</b><br>
-      <img src="screenshots/screenshot_list_1.png" width="400"/>
+      <img src="screenshots/screenshot_detail_1.png" width="400"/>
     </td>
     <td align="center">
       <b>Main Screen (Scroll)</b><br>
-      <img src="screenshots/screenshot_list_2.png" width="400"/>
+      <img src="screenshots/screenshot_detail_2.png" width="400"/>
     </td>
   </tr>
   <tr>
     <td align="center">
       <b>Detail: Japan</b><br>
-      <img src="screenshots/screenshot_detail_1.png" width="300"/>
+      <img src="screenshots/screenshot_list_1.png" width="300"/>
     </td>
     <td align="center">
       <b>Detail: Turkey</b><br>
-      <img src="screenshots/screenshot_detail_2.png" width="300"/>
+      <img src="screenshots/screenshot_list_2.png" width="300"/>
     </td>
   </tr>
   <tr>
