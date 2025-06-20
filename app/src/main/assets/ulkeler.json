@@ -1,0 +1,107 @@
+[
+  {
+    "adi": "Türkiye",
+    "baskent": "Ankara",
+    "yuzolcumu": 783562.0,
+    "dil": "Türkçe",
+    "bayrakKodu": "tr"
+  },
+  {
+    "adi": "Almanya",
+    "baskent": "Berlin",
+    "yuzolcumu": 357022.0,
+    "dil": "Almanca",
+    "bayrakKodu": "de"
+  },
+  {
+    "adi": "Fransa",
+    "baskent": "Paris",
+    "yuzolcumu": 551695.0,
+    "dil": "Fransızca",
+    "bayrakKodu": "fr"
+  },
+  {
+    "adi": "Japonya",
+    "baskent": "Tokyo",
+    "yuzolcumu": 377975.0,
+    "dil": "Japonca",
+    "bayrakKodu": "jp"
+  },
+  {
+    "adi": "Kanada",
+    "baskent": "Ottawa",
+    "yuzolcumu": 9984670.0,
+    "dil": "İngilizce / Fransızca",
+    "bayrakKodu": "ca"
+  },
+  {
+    "adi": "Brezilya",
+    "baskent": "Brasília",
+    "yuzolcumu": 8515767.0,
+    "dil": "Portekizce",
+    "bayrakKodu": "br"
+  },
+  {
+    "adi": "Hindistan",
+    "baskent": "Yeni Delhi",
+    "yuzolcumu": 3287263.0,
+    "dil": "Hintçe / İngilizce",
+    "bayrakKodu": "in"
+  },
+  {
+    "adi": "Çin",
+    "baskent": "Pekin",
+    "yuzolcumu": 9596961.0,
+    "dil": "Çince",
+    "bayrakKodu": "cn"
+  },
+  {
+    "adi": "Amerika Birleşik Devletleri",
+    "baskent": "Washington D.C.",
+    "yuzolcumu": 9833520.0,
+    "dil": "İngilizce",
+    "bayrakKodu": "us"
+  },
+  {
+    "adi": "Rusya",
+    "baskent": "Moskova",
+    "yuzolcumu": 17098246.0,
+    "dil": "Rusça",
+    "bayrakKodu": "ru"
+  },
+  {
+    "adi": "İngiltere",
+    "baskent": "Londra",
+    "yuzolcumu": 243610.0,
+    "dil": "İngilizce",
+    "bayrakKodu": "gb"
+  },
+  {
+    "adi": "İtalya",
+    "baskent": "Roma",
+    "yuzolcumu": 301340.0,
+    "dil": "İtalyanca",
+    "bayrakKodu": "it"
+  },
+  {
+    "adi": "İspanya",
+    "baskent": "Madrid",
+    "yuzolcumu": 505990.0,
+    "dil": "İspanyolca",
+    "bayrakKodu": "es"
+  },
+  {
+    "adi": "Avustralya",
+    "baskent": "Canberra",
+    "yuzolcumu": 7692024.0,
+    "dil": "İngilizce",
+    "bayrakKodu": "au"
+  },
+  {
+    "adi": "Meksika",
+    "baskent": "Meksiko",
+    "yuzolcumu": 1964375.0,
+    "dil": "İspanyolca",
+    "bayrakKodu": "mx"
+  }
+]
