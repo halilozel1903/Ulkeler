@@ -1,162 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="@color/detail_bg">
 
-
-    <ImageView
-        android:id="@+id/imgDetay"
-        android:layout_width="194dp"
-        android:layout_height="148dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/albania" />
-
-    <TextView
-        android:textColor="@android:color/black"
-        android:id="@+id/tvDetay"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="TextView"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgDetay" />
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
 
-
-    <RelativeLayout
-        android:id="@+id/relativeLayout2"
-        android:layout_width="0dp"
-        android:layout_height="339dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDetay">
-
-
+        <!-- Bayrak -->
         <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="22dp"
-            android:layout_marginTop="16dp"
-            app:srcCompat="@drawable/university" />
+            android:id="@+id/imgBayrak"
+            android:layout_width="160dp"
+            android:layout_height="100dp"
+            android:scaleType="fitCenter"
+            android:layout_marginBottom="24dp"
+            android:contentDescription="Bayrak" />
 
+        <!-- Ülke adı -->
         <TextView
-            android:id="@+id/tvUlkeBaskent"
-            android:layout_width="175dp"
-            android:layout_height="34dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginEnd="67dp"
-            android:layout_marginTop="23dp"
-            android:gravity="center"
-            android:textColor="@android:color/black"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/imageView5"
-            android:layout_marginTop="82dp"
-            app:srcCompat="@drawable/phone" />
-
-        <TextView
-            android:id="@+id/tvUlkePhone"
-            android:layout_width="175dp"
-            android:layout_height="38dp"
-            android:layout_alignBottom="@+id/imageView6"
-            android:layout_alignStart="@+id/tvUlkeBaskent"
-            android:layout_marginBottom="4dp"
-            android:gravity="center"
-            android:textColor="@android:color/black"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <ImageView
-            android:id="@+id/imageView7"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_alignStart="@+id/imageView5"
-            android:layout_centerVertical="true"
-            app:srcCompat="@drawable/coins" />
-
-        <TextView
+            android:id="@+id/tvAdi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ülke Adı"
             android:textStyle="bold"
-            android:textColor="@android:color/black"
-            android:id="@+id/tvUlkePara"
-            android:layout_width="175dp"
-            android:layout_height="34dp"
-            android:layout_alignStart="@+id/tvUlkeBaskent"
-            android:layout_centerVertical="true"
-            android:gravity="center"
+            android:textSize="22sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Başkent -->
+        <TextView
+            android:id="@+id/tvBaskent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Başkent"
+            android:textSize="18sp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Dil -->
+        <TextView
+            android:id="@+id/tvDil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dil"
+            android:textSize="18sp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Yüzölçümü -->
+        <TextView
+            android:id="@+id/tvYuzolcumu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yüzölçümü"
             android:textSize="18sp" />
 
-        <ImageView
-            android:id="@+id/imageView10"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignStart="@+id/imageView5"
-            android:layout_marginBottom="76dp"
-            app:srcCompat="@drawable/global" />
-
-        <ImageView
-            android:id="@+id/imageView11"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignStart="@+id/imageView5"
-            android:layout_marginBottom="14dp"
-            app:srcCompat="@drawable/earth" />
-
-        <TextView
-            android:textSize="18sp"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:textColor="@android:color/black"
-            android:id="@+id/tvUlkeDil"
-            android:layout_width="175dp"
-            android:layout_height="34dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignStart="@+id/tvUlkeBaskent"
-            android:layout_marginBottom="83dp" />
-
-        <TextView
-            android:textSize="18sp"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:textColor="@android:color/black"
-            android:id="@+id/tvUlkeKita"
-            android:layout_width="175dp"
-            android:layout_height="34dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignStart="@+id/tvUlkeBaskent"
-            android:layout_marginBottom="21dp" />
-
-
-    </RelativeLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>
