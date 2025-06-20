@@ -16,16 +16,35 @@ Explore countries, their capitals, languages, and flags in a simple and modern A
 
 ## 📸 Screenshots
 
-### 📋 Country List
+<table>
+  <tr>
+    <td align="center">
+      <b>Main Screen</b><br>
+      <img src="screenshots/screenshot_list_1.png" width="400"/>
+    </td>
+    <td align="center">
+      <b>Main Screen (Scroll)</b><br>
+      <img src="screenshots/screenshot_list_2.png" width="400"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <b>Detail: Japan</b><br>
+      <img src="screenshots/screenshot_detail_1.png" width="300"/>
+    </td>
+    <td align="center">
+      <b>Detail: Turkey</b><br>
+      <img src="screenshots/screenshot_detail_2.png" width="300"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2">
+      <b>Detail: United Kingdom</b><br>
+      <img src="screenshots/screenshot_detail_3.png" width="300"/>
+    </td>
+  </tr>
+</table>
 
-![List 1](./screenshots/screenshot_list_1.png)
-![List 2](./screenshots/screenshot_list_2.png)
-
-### 📄 Country Detail
-
-![Detail 1](./screenshots/screenshot_detail_1.png)
-![Detail 2](./screenshots/screenshot_detail_2.png)
-![Detail 3](./screenshots/screenshot_detail_3.png)
 
 ---
 
